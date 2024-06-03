@@ -1,0 +1,146 @@
+<!-- created by Shreejana Shrestha || 
+                Student Id: C0930321 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifetime support calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">The Lifetime Support Calculator of your favourite snack</h1>
+        <form id="supplyForm">
+            <div class="row mt-3 row-box">
+                <div class="col-sm-12 col-md-6">
+                    <div class="row mb-3">
+                        <label for="age1" class="col-sm-5 col-form-label">Your current Age(1):</label>
+                        <div class="col-sm-7 form-group">
+                            <input type="number" class="form-control" id="age_1" placeholder="Enter your current age"
+                                required>
+                            <div id="age_1InputError" class="error">Please enter value.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6">
+                    <div class="row mb-3">
+                        <label for="amountperday1" class="col-sm-5 col-form-label">Amount you consumed per
+                            day(1):</label>
+                        <div class="col-sm-7 form-group">
+                            <input type="number" class="form-control" id="amountperday_1"
+                                placeholder="Enter amount you comsume daily" required>
+                            <div id="amount1InputError" class="error">Please enter value.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-3 row-box">
+                <div class="col-sm-12 col-md-6">
+                    <div class="row mb-3">
+                        <label for="age2" class="col-sm-5 col-form-label">Your current Age(2):</label>
+                        <div class="col-sm-7 form-group">
+                            <input type="number" class="form-control" id="age_2" placeholder="Enter your current age"
+                                required>
+                            <div id="age_2InputError" class="error">Please enter value.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6">
+                    <div class="row mb-3">
+                        <label for="amountperday1" class="col-sm-5 col-form-label">Amount you consumed per
+                            day(2):</label>
+                        <div class="col-sm-7 form-group">
+                            <input type="number" class="form-control" id="amountperday_2"
+                                placeholder="Enter amount you comsume daily" required>
+                            <div id="amount2InputError" class="error">Please enter value.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-3 row-box">
+                <div class="col-sm-12 col-md-6">
+                    <div class="row mb-3">
+                        <label for="age1" class="col-sm-5 col-form-label">Your current Age(3):</label>
+                        <div class="col-sm-7 form-group">
+                            <input type="number" class="form-control" id="age_3" placeholder="Enter your current age"
+                                required>
+                            <div id="age_3InputError" class="error">Please enter value.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6">
+                    <div class="row mb-3">
+                        <label for="amountperday3" class="col-sm-5 col-form-label">Amount you consumed per
+                            day(3):</label>
+                        <div class="col-sm-7 form-group">
+                            <input type="number" class="form-control" id="amountperday_3"
+                                placeholder="Enter amount you comsume daily" required>
+                            <div id="amount3InputError" class="error">Please enter value.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group mt-4">
+                <button type="submit" class="btn btn-success">Calculate</button>
+
+            </div>
+        </form>
+        <div id="output" class="mt-4"></div>
+    </div>
+    <script>
+        function calculateSupply(age, amountPerDay) {
+    const maxAge = 100;
+    const yearsRemaining = maxAge - age;
+    const amountNeeded = Math.round(amountPerDay * 365 * yearsRemaining);
+    return `You will need ${amountNeeded} to last you until the ripe old age of ${maxAge}`;
+}
+
+document.getElementById('supplyForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const current_age1 = parseFloat(document.getElementById('age_1').value);
+    const amountPerDay1 = parseFloat(document.getElementById('amountperday_1').value);
+    const current_age2 = parseFloat(document.getElementById('age_2').value);
+    const amountPerDay2 = parseFloat(document.getElementById('amountperday_2').value);
+    const current_age3 = parseFloat(document.getElementById('age_3').value);
+    const amountPerDay3 = parseFloat(document.getElementById('amountperday_3').value);
+
+    let outputHTML = '';
+    
+    if (!isNaN(current_age1) && !isNaN(amountPerDay1)) {
+        const result1 = calculateSupply(current_age1, amountPerDay1);
+        outputHTML += `<p>${result1}</p>`;
+    } else {
+        outputHTML += `<p>Please enter valid values for Age 1 and Amount per Day 1.</p>`;
+    }
+
+    if (!isNaN(current_age2) && !isNaN(amountPerDay2)) {
+        const result2 = calculateSupply(current_age2, amountPerDay2);
+        outputHTML += `<p>${result2}</p>`;
+    } else {
+        outputHTML += `<p>Please enter valid values for Age 2 and Amount per Day 2.</p>`;
+    }
+
+    if (!isNaN(current_age3) && !isNaN(amountPerDay3)) {
+        const result3 = calculateSupply(current_age3, amountPerDay3);
+        outputHTML += `<p>${result3}</p>`;
+    } else {
+        outputHTML += `<p>Please enter valid values for Age 3 and Amount per Day 3.</p>`;
+    }
+
+    document.getElementById('output').innerHTML = outputHTML;
+});
+
+    </script>
+</body>
+</html>
