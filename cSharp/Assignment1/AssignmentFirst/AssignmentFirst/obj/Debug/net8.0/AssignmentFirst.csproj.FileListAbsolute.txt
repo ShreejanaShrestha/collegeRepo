@@ -1,0 +1,15 @@
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\AssignmentFirst\AssignmentFirst\bin\Debug\net8.0\AssignmentFirst.exe
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\AssignmentFirst\AssignmentFirst\bin\Debug\net8.0\AssignmentFirst.deps.json
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\AssignmentFirst\AssignmentFirst\bin\Debug\net8.0\AssignmentFirst.runtimeconfig.json
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\AssignmentFirst\AssignmentFirst\bin\Debug\net8.0\AssignmentFirst.dll
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\AssignmentFirst\AssignmentFirst\bin\Debug\net8.0\AssignmentFirst.pdb
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\AssignmentFirst\AssignmentFirst\obj\Debug\net8.0\AssignmentFirst.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\AssignmentFirst\AssignmentFirst\obj\Debug\net8.0\AssignmentFirst.AssemblyInfoInputs.cache
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\AssignmentFirst\AssignmentFirst\obj\Debug\net8.0\AssignmentFirst.AssemblyInfo.cs
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\AssignmentFirst\AssignmentFirst\obj\Debug\net8.0\AssignmentFirst.csproj.CoreCompileInputs.cache
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\AssignmentFirst\AssignmentFirst\obj\Debug\net8.0\AssignmentFirst.sourcelink.json
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\AssignmentFirst\AssignmentFirst\obj\Debug\net8.0\AssignmentFirst.dll
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\AssignmentFirst\AssignmentFirst\obj\Debug\net8.0\refint\AssignmentFirst.dll
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\AssignmentFirst\AssignmentFirst\obj\Debug\net8.0\AssignmentFirst.pdb
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\AssignmentFirst\AssignmentFirst\obj\Debug\net8.0\AssignmentFirst.genruntimeconfig.cache
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\AssignmentFirst\AssignmentFirst\obj\Debug\net8.0\ref\AssignmentFirst.dll
