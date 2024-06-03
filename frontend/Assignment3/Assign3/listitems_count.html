@@ -1,0 +1,43 @@
+<!-- Created by Shreejana Shrestha || 
+     Student Id: C0930321 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ListItems Counter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">List Item Counter</h1>
+        <ul id="itemList" class="list-group">
+            <li class="list-group-item">Sunday</li>
+            <li class="list-group-item">Monday</li>
+            <li class="list-group-item">Tuesday</li>
+            <li class="list-group-item">Wednesday</li>
+            <li class="list-group-item">Thursday</li>
+            <li class="list-group-item">Friday</li>
+            <li class="list-group-item">Saturday</li>
+        </ul>
+        <div class="mt-4">
+            <p id="itemCount"></p>
+        </div>
+    </div>
+    <script src="./scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const listItem = document.getElementById('itemList');
+            const allItems = listItem.getElementsByTagName('li');
+            const itemCount = allItems.length;
+
+            const itemCountParagraph = document.getElementById('itemCount');
+            itemCountParagraph.innerHTML = `There are ${itemCount} items in the list.`;
+        });
+    </script>
+</body>
+
+</html>
