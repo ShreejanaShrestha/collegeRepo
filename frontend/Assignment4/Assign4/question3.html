@@ -1,0 +1,51 @@
+<!-- Created by Shreejana Shrestha || 
+     Student Id: C0930321 -->
+<!-- JavaScript function to get difference between two dates in days -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Difference calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Date Difference Calculator</h1>
+        <div class="row mb-3">
+            <label for="first" class="offset-sm-3 col-sm-3 col-form-label">Select first date:</label>
+            <div class="col-sm-4">
+                <input type="date" class="form-control" id="date1">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="second" class="offset-sm-3 col-sm-3 col-form-label">Select second date:</label>
+            <div class="col-sm-4">
+                <input type="date" class="form-control" id="date2">
+            </div>
+        </div>
+        <div class="form-group">
+            <button id="daysCheckBtn" class="btn btn-success" onclick="calculateDateDifference()">Check difference</button>
+        </div>
+        <p id="result" class="mt-4"></p>
+    </div>
+    <script>
+        function calculateDateDifference() {
+        const date1 = new Date(document.getElementById('date1').value);
+        const date2 = new Date(document.getElementById('date2').value);
+
+        if (isNaN(date1) || isNaN(date2)) {
+            alert("Please select valid dates.");
+            return;
+        }
+
+        const timeDifference = Math.abs(date2 - date1);
+        const dayDifference = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+
+        document.getElementById('result').textContent = `The difference is ${dayDifference} day(s).`;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!-- Created by Shreejana Shrestha || 
+     Student Id: C0930321 -->
+
+<!-- Write a JavaScript program to calculate number of days left until next Christmas. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No. of days till Christmas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Days until next Christmas</h1>
+        <h3 id="current_date">Today's Date</h3>
+        <h3 id="days_remaining"></h3>
+    </div>
+    <script>
+        const today = new Date();
+        const currentDate = today.getFullYear();
+        const options = { 
+            weekday: 'long', 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric', 
+            hour: '2-digit', 
+            minute: '2-digit', 
+            second: '2-digit' 
+        };
+        const nextChristmas = new Date(today.getFullYear(), 11, 25);
+
+        if (today > nextChristmas) {
+        nextChristmas.setFullYear(nextChristmas.getFullYear() + 1);
+        }
+
+        const daysUntilChristmas = Math.ceil((nextChristmas - today) / (1000 * 60 * 60 * 24));
+
+        document.getElementById("current_date").textContent = `Current Date and Time: ${today.toLocaleDateString(undefined, options)}`;
+        document.getElementById("days_remaining").textContent = `Days until next Christmas: ${daysUntilChristmas} days left!`;
+    </script>
+</body>
+</html>
