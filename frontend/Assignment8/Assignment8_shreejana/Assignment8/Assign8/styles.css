@@ -1,0 +1,31 @@
+#image {
+    height: 100%;
+    width: 300px;
+}
+
+.box, #hoverMe {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+#fadeBox {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    display: none;
+}
+
+#slideBox {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    display: none;
+}
+
+#content {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: none;
+}
