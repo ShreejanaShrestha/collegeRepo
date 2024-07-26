@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Assignment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .container {
+            padding: 30px;
+            box-shadow: 1px 2px 2px 5px #dddada;
+            border-radius: 8px;
+            background-color: antiquewhite;
+            max-width: 520px;
+        }
+        #intro {
+            color: blue;
+            font-size: 20px;
+        }
+
+        #unique {
+            color: red;
+            font-weight: bold;
+        }
+
+        .common {
+            color: green;
+            font-style: italic;
+        }
+
+        [data-role="attribute"] {
+            color: purple;
+            text-decoration: underline;
+        }
+
+        #list li {
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mb-5 mt-5">
+        <p>-------------------------------Part 1-------------------------------</p>
+    <p id="intro">Original Text</p>
+    <br>
+    <p>-------------------------------Part 2-------------------------------</p>
+    <p id="unique">ID Selector</p>
+    <p class="common">Class Selector</p>
+    <p>Element Selector</p>
+    <p data-role="attribute">Attribute Selector</p>
+    <br>
+    <p>-------------------------------Part 3-------------------------------</p>
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+    <button class="btn btn-secondary" id="addItemButton">Add Item</button>
+    </div>
+    
+
+    <script>
+        $(document).ready(function() {
+            // Part 1: Change text of element with id "intro"
+            $("#intro").text("Hello, jQuery!");
+
+            // Part 2: Apply styles using jQuery selectors
+            $("#unique").css({
+                "color": "red",
+                "font-weight": "bold"
+            });
+
+            $(".common").css({
+                "color": "green",
+                "font-style": "italic"
+            });
+
+            $("[data-role='attribute']").css({
+                "color": "purple",
+                "text-decoration": "underline"
+            });
+
+            // Part 3: Add new list item on button click
+            let counter = $("#list li").length + 1;  // Starting the counter based on current number of items
+
+            $("#addItemButton").click(function () {
+                $("#list").append(`<li>Item ${counter}</li>`);
+                counter++;  // Increment counter for next item
+            });
+
+        });
+    </script>
+</body>
+
+</html>
