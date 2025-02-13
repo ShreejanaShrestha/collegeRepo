@@ -1,0 +1,87 @@
+==============================================================================================
+ Table creation
+==============================================================================================
+CREATE TABLE Player_321 (
+    PlayerID NUMBER PRIMARY KEY,
+    FirstName VARCHAR2(50),
+    LastName VARCHAR2(50),
+    Sport VARCHAR2(50),
+    Vote NUMBER
+);
+
+
+==============================================================================================
+ Insert statements
+==============================================================================================
+INSERT INTO Player_321 (PlayerID, FirstName, LastName, Sport, Vote)
+VALUES (1, 'Michael', 'Jordan', 'Basketball', 98);
+INSERT INTO Player_321 (PlayerID, FirstName, LastName, Sport, Vote)
+VALUES (2, 'Serena', 'Williams', 'Tennis', 95);
+INSERT INTO Player_321 (PlayerID, FirstName, LastName, Sport, Vote)
+VALUES (3, 'Lionel', 'Messi', 'Soccer', 99);
+INSERT INTO Player_321 (PlayerID, FirstName, LastName, Sport, Vote)
+VALUES (4, 'Usain', 'Bolt', 'Athletics', 97);
+
+
+
+
+==============================================================================================
+ Explicit Cursor
+==============================================================================================
+DECLARE
+    CURSOR player_cursor IS
+        SELECT PlayerID, FirstName, LastName, Sport, Vote FROM Player_321;
+    player_record Player_321%ROWTYPE;
+BEGIN
+    OPEN player_cursor;
+    LOOP
+        FETCH player_cursor INTO player_record;
+        EXIT WHEN player_cursor%NOTFOUND;
+        DBMS_OUTPUT.PUT_LINE('PlayerID: ' || player_record.PlayerID ||
+                             ', Name: ' || player_record.FirstName || ' ' || player_record.LastName ||
+                             ', Sport: ' || player_record.Sport ||
+                             ', Vote: ' || player_record.Vote);
+    END LOOP;
+    CLOSE player_cursor;
+END;
+
+
+==============================================================================================
+ Implicit Cursor
+==============================================================================================
+DECLARE
+    total_players NUMBER;
+BEGIN
+    SELECT COUNT(*) INTO total_players FROM Player_321;
+    DBMS_OUTPUT.PUT_LINE('Total Players: ' || total_players);
+END;
+
+
+
+===========================================================================================
+%ROWCOUNT, %FOUND, and %NOTFOUND
+============================================================================================
+
+DECLARE
+    CURSOR player_cursor IS
+        SELECT PlayerID, FirstName, LastName, Sport, Vote FROM Player_321;
+    player_record Player_321%ROWTYPE;
+BEGIN
+    OPEN player_cursor;
+    LOOP
+        FETCH player_cursor INTO player_record;
+
+        EXIT WHEN player_cursor%NOTFOUND;
+
+        DBMS_OUTPUT.PUT_LINE('PlayerID: ' || TO_CHAR(player_record.PlayerID) ||
+                             ', Name: ' || player_record.FirstName || ' ' || player_record.LastName ||
+                             ', Sport: ' || player_record.Sport ||
+                             ', Vote: ' || TO_CHAR(player_record.Vote));
+
+        DBMS_OUTPUT.PUT_LINE('Rows fetched so far: ' || TO_CHAR(player_cursor%ROWCOUNT));
+        DBMS_OUTPUT.PUT_LINE('Cursor Found: ' || CASE WHEN player_cursor%FOUND THEN 'TRUE' ELSE 'FALSE' END);
+        DBMS_OUTPUT.PUT_LINE('Cursor Not Found: ' || CASE WHEN player_cursor%NOTFOUND THEN 'TRUE' ELSE 'FALSE' END);
+    END LOOP;
+    CLOSE player_cursor;
+    DBMS_OUTPUT.PUT_LINE('Cursor closed.');
+END;
