@@ -31,6 +31,7 @@ daysPassedHeading.style.color = "#149649";
 
 // remove characters function
 function removeCharacters() {
+    document.write("hello world")
     let string = document.getElementById('user_input_string')
     let stringValue = string.value.trim()
     let numberOfChars = parseFloat(document.getElementById('input_num_of_characters').value)

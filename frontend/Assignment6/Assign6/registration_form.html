@@ -1,0 +1,77 @@
+<!-- Created by Shreejana Shrestha || 
+     Student Id: C0930321 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h1 class="mb-4">Register with our Website</h1>
+        <form id="registration-form" class="text-align">
+            <div class="row mt-3">
+                <div class="col-sm-12 col-md-6 offset-md-3">
+                    <div class="row mb-3">
+                        <label for="email" class="col-sm-4 col-form-label">Email Address:</label>
+                        <div class="col-sm-8">
+                            <input type="email" class="form-control" id="email" required>
+                            <div id="emailInputError" class="error">Please enter a valid email address.</div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="confirm-email" class="col-sm-4 col-form-label">Re-enter Email Address:</label>
+                        <div class="col-sm-8">
+                            <input type="email" class="form-control" id="confirm-email" required>
+                            <div id="confirmEmailInputError" class="error">Must equal first email entry.</div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="first_name" class="col-sm-4 col-form-label">First Name:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="first_name" required>
+                            <div id="firstNameInputError" class="error">First name should contain only letters.</div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="last_name" class="col-sm-4 col-form-label">Last Name:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="last_name" required>
+                            <div id="lastNameInputError" class="error">Last name should contain only letters.</div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="state_code" class="col-sm-4 col-form-label">2 character state code:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="state_code" required>
+                            <div id="stateCodeInputError" class="error">State code should be exactly 2 letters.</div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="zipcode" class="col-sm-4 col-form-label">5 Digit zip code:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="zipcode" required>
+                            <div id="zipCodeInputError" class="error">Zip code should be in format: letter, number,
+                                letter, number, letter.</div>
+                        </div>
+                    </div>
+                    <div class="form-group position-relative">
+                        <button type="submit" id="submitBtn" class="btn btn-success" disabled>Join our list
+                            <div class="block-symbol">🚫</div>
+                        </button>
+                        <button type="button" id="reset-button" class="btn btn-secondary">Reset</button>
+                        <div id="formInputError" class="error">Please fill out all the fields correctly.</div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div id="welcomeMessage" class="mt-4"></div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
