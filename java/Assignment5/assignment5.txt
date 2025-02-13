@@ -1,0 +1,25 @@
+Write the programs using array:
+
+1. 
+
+a. array size and elements (strings only) must be taken from user as input during run-time and validate them using regex (Pattern and Matcher)
+
+b. arrange the elements in descending order
+
+2. 
+
+a. In main(), create an array for generating series starting from 0 till 21[eg. 0 1 1 2 3 5 8 13 21]
+
+b. Find out even numbers and odd numbers separately.
+
+c. Pass the even numbers to even() and odd numbers to odd().
+
+d. In even(), get the sum of all.
+
+e. In odd(), get the sum of all.
+
+f. In main(), which sum is largest.
+
+g. Send the smallest sum to factorial().
+
+h. Compute the factorial and show the result in factorial().
