@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sthas\\OneDrive - Lambton College\\lambton\\Term 2\\Assignments\\cSharp\\Assignment1\\Assignment5_Q4_c0930321\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3C6A8C89-AF8F-4BB3-B650-FADBB1AEADBC}|Assignment5_Q4_c0930321\\Assignment5_Q4_c0930321.csproj|c:\\users\\sthas\\onedrive - lambton college\\lambton\\term 2\\assignments\\csharp\\assignment1\\assignment5_q4_c0930321\\assignment5_q4_c0930321\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C6A8C89-AF8F-4BB3-B650-FADBB1AEADBC}|Assignment5_Q4_c0930321\\Assignment5_Q4_c0930321.csproj|solutionrelative:assignment5_q4_c0930321\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C6A8C89-AF8F-4BB3-B650-FADBB1AEADBC}|Assignment5_Q4_c0930321\\Assignment5_Q4_c0930321.csproj|c:\\users\\sthas\\onedrive - lambton college\\lambton\\term 2\\assignments\\csharp\\assignment1\\assignment5_q4_c0930321\\assignment5_q4_c0930321\\animalworld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C6A8C89-AF8F-4BB3-B650-FADBB1AEADBC}|Assignment5_Q4_c0930321\\Assignment5_Q4_c0930321.csproj|solutionrelative:assignment5_q4_c0930321\\animalworld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AnimalWorld.cs",
+              "DocumentMoniker": "C:\\Users\\sthas\\OneDrive - Lambton College\\lambton\\Term 2\\Assignments\\cSharp\\Assignment1\\Assignment5_Q4_c0930321\\Assignment5_Q4_c0930321\\AnimalWorld.cs",
+              "RelativeDocumentMoniker": "Assignment5_Q4_c0930321\\AnimalWorld.cs",
+              "ToolTip": "C:\\Users\\sthas\\OneDrive - Lambton College\\lambton\\Term 2\\Assignments\\cSharp\\Assignment1\\Assignment5_Q4_c0930321\\Assignment5_Q4_c0930321\\AnimalWorld.cs",
+              "RelativeToolTip": "Assignment5_Q4_c0930321\\AnimalWorld.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T17:21:11.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Animal.cs",
+              "DocumentMoniker": "C:\\Users\\sthas\\OneDrive - Lambton College\\lambton\\Term 2\\Assignments\\cSharp\\Assignment1\\Assignment5_Q4_c0930321\\Assignment5_Q4_c0930321\\Animal.cs",
+              "RelativeDocumentMoniker": "Assignment5_Q4_c0930321\\Animal.cs",
+              "ToolTip": "C:\\Users\\sthas\\OneDrive - Lambton College\\lambton\\Term 2\\Assignments\\cSharp\\Assignment1\\Assignment5_Q4_c0930321\\Assignment5_Q4_c0930321\\Animal.cs",
+              "RelativeToolTip": "Assignment5_Q4_c0930321\\Animal.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAQwB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T17:19:06.214Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

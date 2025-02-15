@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sthas\\OneDrive - Lambton College\\lambton\\Term 2\\Assignments\\cSharp\\Assignment1\\Assigmnent_Q3_c0930321\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A3C50D2D-FA37-4F19-9465-4A4A322D52B1}|Assigmnent_Q3_c0930321\\Assigmnent_Q3_c0930321.csproj|c:\\users\\sthas\\onedrive - lambton college\\lambton\\term 2\\assignments\\csharp\\assignment1\\assigmnent_q3_c0930321\\assigmnent_q3_c0930321\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3C50D2D-FA37-4F19-9465-4A4A322D52B1}|Assigmnent_Q3_c0930321\\Assigmnent_Q3_c0930321.csproj|solutionrelative:assigmnent_q3_c0930321\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3C50D2D-FA37-4F19-9465-4A4A322D52B1}|Assigmnent_Q3_c0930321\\Assigmnent_Q3_c0930321.csproj|c:\\users\\sthas\\onedrive - lambton college\\lambton\\term 2\\assignments\\csharp\\assignment1\\assigmnent_q3_c0930321\\assigmnent_q3_c0930321\\ivehiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3C50D2D-FA37-4F19-9465-4A4A322D52B1}|Assigmnent_Q3_c0930321\\Assigmnent_Q3_c0930321.csproj|solutionrelative:assigmnent_q3_c0930321\\ivehiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3C50D2D-FA37-4F19-9465-4A4A322D52B1}|Assigmnent_Q3_c0930321\\Assigmnent_Q3_c0930321.csproj|c:\\users\\sthas\\onedrive - lambton college\\lambton\\term 2\\assignments\\csharp\\assignment1\\assigmnent_q3_c0930321\\assigmnent_q3_c0930321\\vehicleprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3C50D2D-FA37-4F19-9465-4A4A322D52B1}|Assigmnent_Q3_c0930321\\Assigmnent_Q3_c0930321.csproj|solutionrelative:assigmnent_q3_c0930321\\vehicleprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VehicleProgram.cs",
+              "DocumentMoniker": "C:\\Users\\sthas\\OneDrive - Lambton College\\lambton\\Term 2\\Assignments\\cSharp\\Assignment1\\Assigmnent_Q3_c0930321\\Assigmnent_Q3_c0930321\\VehicleProgram.cs",
+              "RelativeDocumentMoniker": "Assigmnent_Q3_c0930321\\VehicleProgram.cs",
+              "ToolTip": "C:\\Users\\sthas\\OneDrive - Lambton College\\lambton\\Term 2\\Assignments\\cSharp\\Assignment1\\Assigmnent_Q3_c0930321\\Assigmnent_Q3_c0930321\\VehicleProgram.cs",
+              "RelativeToolTip": "Assigmnent_Q3_c0930321\\VehicleProgram.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T17:09:31.077Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Car.cs",
+              "DocumentMoniker": "C:\\Users\\sthas\\OneDrive - Lambton College\\lambton\\Term 2\\Assignments\\cSharp\\Assignment1\\Assigmnent_Q3_c0930321\\Assigmnent_Q3_c0930321\\Car.cs",
+              "RelativeDocumentMoniker": "Assigmnent_Q3_c0930321\\Car.cs",
+              "ToolTip": "C:\\Users\\sthas\\OneDrive - Lambton College\\lambton\\Term 2\\Assignments\\cSharp\\Assignment1\\Assigmnent_Q3_c0930321\\Assigmnent_Q3_c0930321\\Car.cs",
+              "RelativeToolTip": "Assigmnent_Q3_c0930321\\Car.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAkwDEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T17:08:09.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IVehiculo.cs",
+              "DocumentMoniker": "C:\\Users\\sthas\\OneDrive - Lambton College\\lambton\\Term 2\\Assignments\\cSharp\\Assignment1\\Assigmnent_Q3_c0930321\\Assigmnent_Q3_c0930321\\IVehiculo.cs",
+              "RelativeDocumentMoniker": "Assigmnent_Q3_c0930321\\IVehiculo.cs",
+              "ToolTip": "C:\\Users\\sthas\\OneDrive - Lambton College\\lambton\\Term 2\\Assignments\\cSharp\\Assignment1\\Assigmnent_Q3_c0930321\\Assigmnent_Q3_c0930321\\IVehiculo.cs",
+              "RelativeToolTip": "Assigmnent_Q3_c0930321\\IVehiculo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T17:06:51.061Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

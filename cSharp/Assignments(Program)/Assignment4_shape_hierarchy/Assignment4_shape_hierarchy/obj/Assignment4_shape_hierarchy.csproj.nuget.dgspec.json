@@ -1,0 +1,68 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\sthas\\OneDrive - Lambton College\\lambton\\Term 2\\Assignments\\cSharp\\Assignment1\\Assignment4_shape_hierarchy\\Assignment4_shape_hierarchy\\Assignment4_shape_hierarchy.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\sthas\\OneDrive - Lambton College\\lambton\\Term 2\\Assignments\\cSharp\\Assignment1\\Assignment4_shape_hierarchy\\Assignment4_shape_hierarchy\\Assignment4_shape_hierarchy.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sthas\\OneDrive - Lambton College\\lambton\\Term 2\\Assignments\\cSharp\\Assignment1\\Assignment4_shape_hierarchy\\Assignment4_shape_hierarchy\\Assignment4_shape_hierarchy.csproj",
+        "projectName": "Assignment4_shape_hierarchy",
+        "projectPath": "C:\\Users\\sthas\\OneDrive - Lambton College\\lambton\\Term 2\\Assignments\\cSharp\\Assignment1\\Assignment4_shape_hierarchy\\Assignment4_shape_hierarchy\\Assignment4_shape_hierarchy.csproj",
+        "packagesPath": "C:\\Users\\sthas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sthas\\OneDrive - Lambton College\\lambton\\Term 2\\Assignments\\cSharp\\Assignment1\\Assignment4_shape_hierarchy\\Assignment4_shape_hierarchy\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\sthas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

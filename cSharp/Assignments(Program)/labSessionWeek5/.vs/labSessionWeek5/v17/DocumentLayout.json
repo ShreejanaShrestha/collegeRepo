@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sthas\\OneDrive - Lambton College\\lambton\\Term 2\\Assignments\\cSharp\\Assignment1\\labSessionWeek5\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4DDA25F0-04BD-4A81-8AE7-36586411E67D}|labSessionWeek5\\labSessionWeek5.csproj|c:\\users\\sthas\\onedrive - lambton college\\lambton\\term 2\\assignments\\csharp\\assignment1\\labsessionweek5\\labsessionweek5\\labsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DDA25F0-04BD-4A81-8AE7-36586411E67D}|labSessionWeek5\\labSessionWeek5.csproj|solutionrelative:labsessionweek5\\labsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "labSession.cs",
+              "DocumentMoniker": "C:\\Users\\sthas\\OneDrive - Lambton College\\lambton\\Term 2\\Assignments\\cSharp\\Assignment1\\labSessionWeek5\\labSessionWeek5\\labSession.cs",
+              "RelativeDocumentMoniker": "labSessionWeek5\\labSession.cs",
+              "ToolTip": "C:\\Users\\sthas\\OneDrive - Lambton College\\lambton\\Term 2\\Assignments\\cSharp\\Assignment1\\labSessionWeek5\\labSessionWeek5\\labSession.cs",
+              "RelativeToolTip": "labSessionWeek5\\labSession.cs",
+              "ViewState": "AQIAAEUAAAAAAAAAAAA1wD4AAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T16:56:12.99Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

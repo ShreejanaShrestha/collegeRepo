@@ -1,0 +1,15 @@
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment4_bank_account\Assignment4_bank_account\bin\Debug\net8.0\Assignment4_bank_account.exe
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment4_bank_account\Assignment4_bank_account\bin\Debug\net8.0\Assignment4_bank_account.deps.json
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment4_bank_account\Assignment4_bank_account\bin\Debug\net8.0\Assignment4_bank_account.runtimeconfig.json
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment4_bank_account\Assignment4_bank_account\bin\Debug\net8.0\Assignment4_bank_account.dll
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment4_bank_account\Assignment4_bank_account\bin\Debug\net8.0\Assignment4_bank_account.pdb
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment4_bank_account\Assignment4_bank_account\obj\Debug\net8.0\Assignment4_bank_account.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment4_bank_account\Assignment4_bank_account\obj\Debug\net8.0\Assignment4_bank_account.AssemblyInfoInputs.cache
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment4_bank_account\Assignment4_bank_account\obj\Debug\net8.0\Assignment4_bank_account.AssemblyInfo.cs
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment4_bank_account\Assignment4_bank_account\obj\Debug\net8.0\Assignment4_bank_account.csproj.CoreCompileInputs.cache
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment4_bank_account\Assignment4_bank_account\obj\Debug\net8.0\Assignment4_bank_account.sourcelink.json
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment4_bank_account\Assignment4_bank_account\obj\Debug\net8.0\Assignment4_bank_account.dll
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment4_bank_account\Assignment4_bank_account\obj\Debug\net8.0\refint\Assignment4_bank_account.dll
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment4_bank_account\Assignment4_bank_account\obj\Debug\net8.0\Assignment4_bank_account.pdb
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment4_bank_account\Assignment4_bank_account\obj\Debug\net8.0\Assignment4_bank_account.genruntimeconfig.cache
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment4_bank_account\Assignment4_bank_account\obj\Debug\net8.0\ref\Assignment4_bank_account.dll

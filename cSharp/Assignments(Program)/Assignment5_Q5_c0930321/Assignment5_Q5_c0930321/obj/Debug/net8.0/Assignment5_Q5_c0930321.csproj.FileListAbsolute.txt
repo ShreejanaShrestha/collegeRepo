@@ -1,0 +1,15 @@
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment5_Q5_c0930321\Assignment5_Q5_c0930321\bin\Debug\net8.0\Assignment5_Q5_c0930321.exe
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment5_Q5_c0930321\Assignment5_Q5_c0930321\bin\Debug\net8.0\Assignment5_Q5_c0930321.deps.json
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment5_Q5_c0930321\Assignment5_Q5_c0930321\bin\Debug\net8.0\Assignment5_Q5_c0930321.runtimeconfig.json
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment5_Q5_c0930321\Assignment5_Q5_c0930321\bin\Debug\net8.0\Assignment5_Q5_c0930321.dll
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment5_Q5_c0930321\Assignment5_Q5_c0930321\bin\Debug\net8.0\Assignment5_Q5_c0930321.pdb
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment5_Q5_c0930321\Assignment5_Q5_c0930321\obj\Debug\net8.0\Assignment5_Q5_c0930321.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment5_Q5_c0930321\Assignment5_Q5_c0930321\obj\Debug\net8.0\Assignment5_Q5_c0930321.AssemblyInfoInputs.cache
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment5_Q5_c0930321\Assignment5_Q5_c0930321\obj\Debug\net8.0\Assignment5_Q5_c0930321.AssemblyInfo.cs
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment5_Q5_c0930321\Assignment5_Q5_c0930321\obj\Debug\net8.0\Assignment5_Q5_c0930321.csproj.CoreCompileInputs.cache
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment5_Q5_c0930321\Assignment5_Q5_c0930321\obj\Debug\net8.0\Assignment5_Q5_c0930321.sourcelink.json
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment5_Q5_c0930321\Assignment5_Q5_c0930321\obj\Debug\net8.0\Assignment5_Q5_c0930321.dll
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment5_Q5_c0930321\Assignment5_Q5_c0930321\obj\Debug\net8.0\refint\Assignment5_Q5_c0930321.dll
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment5_Q5_c0930321\Assignment5_Q5_c0930321\obj\Debug\net8.0\Assignment5_Q5_c0930321.pdb
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment5_Q5_c0930321\Assignment5_Q5_c0930321\obj\Debug\net8.0\Assignment5_Q5_c0930321.genruntimeconfig.cache
+C:\Users\sthas\OneDrive - Lambton College\lambton\Term 2\Assignments\cSharp\Assignment1\Assignment5_Q5_c0930321\Assignment5_Q5_c0930321\obj\Debug\net8.0\ref\Assignment5_Q5_c0930321.dll

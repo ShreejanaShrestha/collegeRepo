@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sthas\\OneDrive - Lambton College\\lambton\\Term 2\\Assignments\\cSharp\\Assignment1\\Assignment5_c0930321_Q1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F0D70B93-5D46-4256-A91D-726767FBFA23}|Assignment5_c0930321_Q1\\Assignment5_c0930321_Q1.csproj|c:\\users\\sthas\\onedrive - lambton college\\lambton\\term 2\\assignments\\csharp\\assignment1\\assignment5_c0930321_q1\\assignment5_c0930321_q1\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0D70B93-5D46-4256-A91D-726767FBFA23}|Assignment5_c0930321_Q1\\Assignment5_c0930321_Q1.csproj|solutionrelative:assignment5_c0930321_q1\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0D70B93-5D46-4256-A91D-726767FBFA23}|Assignment5_c0930321_Q1\\Assignment5_c0930321_Q1.csproj|c:\\users\\sthas\\onedrive - lambton college\\lambton\\term 2\\assignments\\csharp\\assignment1\\assignment5_c0930321_q1\\assignment5_c0930321_q1\\schoolprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0D70B93-5D46-4256-A91D-726767FBFA23}|Assignment5_c0930321_Q1\\Assignment5_c0930321_Q1.csproj|solutionrelative:assignment5_c0930321_q1\\schoolprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SchoolProgram.cs",
+              "DocumentMoniker": "C:\\Users\\sthas\\OneDrive - Lambton College\\lambton\\Term 2\\Assignments\\cSharp\\Assignment1\\Assignment5_c0930321_Q1\\Assignment5_c0930321_Q1\\SchoolProgram.cs",
+              "RelativeDocumentMoniker": "Assignment5_c0930321_Q1\\SchoolProgram.cs",
+              "ToolTip": "C:\\Users\\sthas\\OneDrive - Lambton College\\lambton\\Term 2\\Assignments\\cSharp\\Assignment1\\Assignment5_c0930321_Q1\\Assignment5_c0930321_Q1\\SchoolProgram.cs",
+              "RelativeToolTip": "Assignment5_c0930321_Q1\\SchoolProgram.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T16:59:11.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\Users\\sthas\\OneDrive - Lambton College\\lambton\\Term 2\\Assignments\\cSharp\\Assignment1\\Assignment5_c0930321_Q1\\Assignment5_c0930321_Q1\\Person.cs",
+              "RelativeDocumentMoniker": "Assignment5_c0930321_Q1\\Person.cs",
+              "ToolTip": "C:\\Users\\sthas\\OneDrive - Lambton College\\lambton\\Term 2\\Assignments\\cSharp\\Assignment1\\Assignment5_c0930321_Q1\\Assignment5_c0930321_Q1\\Person.cs",
+              "RelativeToolTip": "Assignment5_c0930321_Q1\\Person.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAQwB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T16:55:40.735Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

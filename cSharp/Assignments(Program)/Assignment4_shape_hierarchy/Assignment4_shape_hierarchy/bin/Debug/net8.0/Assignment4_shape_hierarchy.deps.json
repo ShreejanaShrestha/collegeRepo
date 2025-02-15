@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Assignment4_shape_hierarchy/1.0.0": {
+        "runtime": {
+          "Assignment4_shape_hierarchy.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Assignment4_shape_hierarchy/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
