@@ -1,0 +1,38 @@
+create table courses
+( code        VARCHAR2(6)  constraint C_PK
+                           primary key
+, description VARCHAR2(30) constraint C_DESC_NN
+                           not null
+, category    CHAR(3)      constraint C_CAT_NN
+                           not null
+, duration    NUMBER(2)    constraint C_DUR_NN
+                           not null
+, constraint  C_CODE_CHK   check
+                           (code = upper(code))
+, constraint  C_CAT_CHK    check
+                           (category in ('GEN','BLD','DSG'))
+) ;
+
+
+insert into courses values
+      ('SQL','Introduction to SQL',         'GEN',4);
+insert into courses values
+      ('OAU','Oracle for application users','GEN',1);
+insert into courses values
+      ('JAV','Java for Oracle developers',  'BLD',4);
+insert into courses values
+      ('PLS','Introduction to PL/SQL',      'BLD',1);
+insert into courses values
+      ('XML','XML for Oracle developers',   'BLD',2);
+insert into courses values
+      ('ERM','Data modeling with ERM',      'DSG',3);
+insert into courses values
+      ('PMT','Process modeling techniques', 'DSG',1);
+insert into courses values
+      ('RSD','Relational system design',    'DSG',2);
+insert into courses values
+      ('PRO','Prototyping',                 'DSG',5);
+insert into courses values
+      ('GEN','System generation',           'DSG',4);
+
+alter table courses enable primary key;

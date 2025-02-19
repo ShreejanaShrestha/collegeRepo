@@ -1,0 +1,63 @@
+using System;
+
+namespace Lab02
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x = 0;
+            do
+            {
+                Console.Write("Enter a value: ");
+                string val = Console.ReadLine();
+
+                //x = Convert.ToInt32(val); // this can only convert numbers 
+                //x = Convert.ToDecimal(val);
+
+                // try parse returns 2 values 
+                // 1. bool if the conversion was successful or not 
+                // 2. assigns the value to the parameter, if the conversion was successful. 
+                if (!Int32.TryParse(val, out x))
+                {
+                    Console.WriteLine("Value must be a number");
+                } else if (x < 100)
+                {
+                    Console.WriteLine("Value must be greater than 100");
+                }
+                
+            } while (x < 100 && x <100000);
+
+            Console.WriteLine("x = {0}", x);
+
+            string name = "Peter";
+            if (name== "Bruce")
+            {
+                Console.WriteLine("Hello Bruce!");
+            }
+            else
+            {
+                Console.WriteLine("You are not Bruce");
+            }
+
+            string customerType = "R";
+            decimal discountPercent = 0m;
+
+            switch (customerType)
+            {
+                case "R":
+                    discountPercent = .1m;
+                    break;
+                case "C":
+                    discountPercent = .2m;
+                    break;
+                default:
+                    discountPercent = 0m;
+                    break;
+            }
+
+            Console.WriteLine("Your discount: {0}", discountPercent);
+
+        }
+    }
+}

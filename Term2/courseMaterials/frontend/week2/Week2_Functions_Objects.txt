@@ -1,0 +1,259 @@
+<!-- Labs:Javascripts functions & objects -->
+<html>
+<head>
+<script type="text/javascript">
+function displaymessage()
+{
+alert("Hello World!");
+}
+</script>
+</head>
+<body>
+<form>
+<input type="button" value="Click me!"
+onclick="displaymessage()" />
+</form>
+<p>By pressing the button above, a function will be called.
+The function will alert a message.</p>
+</body>
+</html>
+
+<!-- 2. @@@ How to pass a parameter -->
+<html>
+<head>
+<script type="text/javascript">
+function myfunction(txt)
+{
+alert(txt);
+}
+</script>
+</head>
+<body>
+<form>
+<input type="button" onclick="myfunction('Hello')"
+value="Call function">
+</form>
+<p>By pressing the button above, a function will be called
+with "Hello" as a parameter. The function will alert the
+parameter.</p>
+</body>
+</html>
+
+<!-- 3. @@@ How to return a value -->
+<html>
+<head>
+<script type="text/javascript">
+function myFunction()
+{
+return ("Hello world!");
+}
+</script>
+</head>
+<body>
+<script type="text/javascript">
+document.write(myFunction())
+</script>
+</body>
+</html>
+
+<!-- 4. Pass parameters -->
+<html>
+<head>
+<script type="text/javascript">
+function product(a,b)
+{
+return a*b;
+}
+</script>
+</head>
+<body>
+<script type="text/javascript">
+document.write(product(4,3));
+</script>
+<p>The script in the body section calls a function with two
+parameters (4 and 3).</p>
+<p>The function will return the product of these two parameters.</p>
+</body>
+</html>
+
+<!-- Objects -->
+<!-- Object property -->
+<html>
+<body>
+<script type="text/javascript">
+var txt="Hello World!";
+document.write(txt.length);
+</script>
+</body>
+</html>
+
+<!-- Object Methods -->
+<html>
+<body>
+<script type="text/javascript">
+var str="Hello world!";
+document.write(str.toUpperCase());
+</script>
+</body>
+</html>
+
+<!-- Object property -->
+
+<html>
+<body>
+<script type="text/javascript">
+var txt = "Hello World!"
+document.write("<p>Big: " + txt.big() + "</p>");
+document.write("<p>Small: " + txt.small() + "</p>");
+document.write("<p>Bold: " + txt.bold() + "</p>");
+document.write("<p>Italic: " + txt.italics() + "</p>");
+document.write("<p>Fixed: " + txt.fixed() + "</p>");
+document.write("<p>Strike: " + txt.strike() + "</p>");
+
+</script>
+</body>
+</html>
+
+<!-- Date Object property -->
+<html>
+<body>
+<script type="text/javascript">
+var d=new Date();
+document.write(d);
+</script>
+</body>
+</html>
+
+<!-- getTime() to calculate the mil-
+liseconds since 1970. -->
+<html>
+<body>
+<script type="text/javascript">
+var d = new Date();
+document.write(d.getTime());
+</script>
+</body>
+</html>
+
+<!-- Universal Time. -->
+<html>
+<body>
+<script type="text/javascript">
+var d=new Date();
+document.write("Original form: ");
+document.write(d + "<br />");
+document.write("To string (universal time): ");
+document.write(d.toUTCString());
+</script>
+</body>
+</html>
+
+
+<!-- Date() and getDay()-->
+<html>
+<body>
+<script type="text/javascript">
+var d=new Date();
+var weekday=new Array(7);
+weekday[0]="Sunday";
+weekday[1]="Monday";
+weekday[2]="Tuesday";
+weekday[3]="Wednesday";
+weekday[4]="Thursday";
+weekday[5]="Friday";
+weekday[6]="Saturday";
+document.write("Today is " + weekday[d.getDay()]);
+</script>
+</body>
+</html>
+
+<!-- Array Object-->
+
+<html>
+<body>
+<script type="text/javascript">
+var mycars = new Array();
+mycars[0] = "Saab";
+mycars[1] = "Volvo";
+mycars[2] = "BMW";
+for (i=0;i<mycars.length;i++)
+{
+document.write(mycars[i] + "<br />");
+}
+</script>
+</body>
+</html>
+
+<!-- Array -> for x in loop-->
+<html>
+<body>
+<script type="text/javascript">
+var x;
+var mycars = new Array();
+mycars[0] = "Saab";
+mycars[1] = "Volvo";
+mycars[2] = "BMW";
+for (x in mycars)
+{
+document.write(mycars[x] + "<br />");
+}
+</script>
+</body>
+</html>
+
+
+<!-- Add an element to Array -> splice-->
+<!-- 0 no items removed-->
+<html>
+<body>
+<script type="text/javascript">
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.write("Removed: " + fruits.splice(2,0,"Lemon") +
+"<br />");
+document.write(fruits);
+</script>
+</body>
+</html>
+
+<!-- Remove items from an array-->
+
+<html>
+<body>
+<script type="text/javascript">
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.write(fruits.pop() + "<br />");
+document.write(fruits + "<br />");
+document.write(fruits.pop() + "<br />");
+document.write(fruits);
+</script>
+</body>
+</html>
+
+
+<!-- Math Object-->
+<html>
+<body>
+<script type="text/javascript">
+document.write(Math.round(0.60) + "<br />");
+document.write(Math.round(0.50) + "<br />");
+document.write(Math.round(0.49) + "<br />");
+document.write(Math.round(-4.40) + "<br />");
+document.write(Math.round(-4.60));
+</script>
+</body>
+</html>
+
+<!-- Math Object-->
+<html>
+<body>
+<script type="text/javascript">
+document.write(Math.max(5,10) + "<br />");
+document.write(Math.max(0,150,30,20,38) + "<br />");
+document.write(Math.max(-5,10) + "<br />");
+document.write(Math.max(-5,-10) + "<br />");
+document.write(Math.max(1.5,2.5));
+</script>
+</body>
+</html>
+
+

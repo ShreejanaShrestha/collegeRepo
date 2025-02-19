@@ -1,0 +1,278 @@
+explicit cursor
+
+SET SERVEROUTPUT ON
+DECLARE
+vr_student student%ROWTYPE;
+BEGIN
+SELECT *
+INTO vr_student
+FROM student
+WHERE student_id = 119;
+DBMS_OUTPUT.PUT_LINE (vr_student.first_name||' '
+||vr_student.last_name||' has an ID of 119');
+EXCEPTION
+WHEN no_data_found
+THEN
+RAISE_APPLICATION_ERROR(-2001,'The Student '||
+'is not in the database');
+END;
+
+#################################################################
+
+SET SERVEROUTPUT ON;
+DECLARE
+CURSOR c_student_name IS
+SELECT first_name, last_name
+FROM student
+WHERE rownum <= 5;
+vr_student_name c_student_name%ROWTYPE;
+BEGIN
+OPEN c_student_name;
+LOOP
+FETCH c_student_name INTO vr_student_name;
+EXIT WHEN c_student_name%NOTFOUND;
+DBMS_OUTPUT.PUT_LINE('Student name: '||
+vr_student_name.first_name
+||' '||vr_student_name.last_name);
+END LOOP;
+CLOSE c_student_name;
+END;
+
+#############################################################################
+
+move the dbms_output to outside the loop
+
+SET SERVEROUTPUT ON;
+DECLARE
+CURSOR c_student_name IS
+SELECT first_name, last_name
+FROM student
+WHERE rownum <= 5;
+vr_student_name c_student_name%ROWTYPE;
+BEGIN
+OPEN c_student_name;
+LOOP
+FETCH c_student_name INTO vr_student_name;
+EXIT WHEN c_student_name%NOTFOUND;
+END LOOP;
+CLOSE c_student_name;
+DBMS_OUTPUT.PUT_LINE('Student name:'||
+vr_student_name.first_name||' '
+||vr_student_name.last_name);
+END;
+
+##################################################################################
+
+Here is an example of the complete cycle of declaring, opening, fetching, and closing a
+cursor, including use of cursor attributes.
+
+SET SERVEROUTPUT ON
+DECLARE
+v_sid student.student_id%TYPE;
+CURSOR c_student IS
+SELECT student_id
+FROM student
+WHERE student_id < 110;
+BEGIN
+OPEN c_student;
+LOOP
+FETCH c_student INTO v_sid;
+IF c_student%FOUND THEN
+DBMS_OUTPUT.PUT_LINE
+('Just FETCHED row '
+||TO_CHAR(c_student%ROWCOUNT)||
+' Student ID: '||v_sid);
+ELSE
+EXIT;
+END IF;
+END LOOP;
+CLOSE c_student;
+EXCEPTION
+WHEN OTHERS
+THEN
+IF c_student%ISOPEN
+THEN
+CLOSE c_student;
+END IF;
+END;
+
+
+##########################################################################
+
+
+Cursor FOR Loop
+
+
+first create table_log
+
+create table table_log
+(description VARCHAR2(250));
+
+
+now create cursor
+
+DECLARE
+CURSOR c_student IS
+SELECT student_id, last_name, first_name
+FROM student
+WHERE student_id < 110;
+BEGIN
+FOR r_student IN c_student
+LOOP
+INSERT INTO table_log
+VALUES(r_student.last_name);
+END LOOP;
+END;
+
+now select the cursor
+
+SELECT * from table_log;
+
+#######################################
+
+nested cursors
+
+
+enter data to the zip codes
+create ZIP Code Table
+CREATE TABLE ZIPCODE
+ (ZIP VARCHAR2(5) 
+ ,CITY VARCHAR2(25)
+ ,STATE VARCHAR2(2)
+ ,CREATED_BY VARCHAR2(30) 
+ ,CREATED_DATE DATE 
+ ,MODIFIED_BY VARCHAR2(30) 
+ ,MODIFIED_DATE DATE 
+ )
+
+INSERT INTO zipcode VALUES ('00914','Santurce','PR','AMORRISO',TO_DATE('03-AUG-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('24-NOV-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO zipcode VALUES ('01247','North Adams','MA','AMORRISO',TO_DATE('03-AUG-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('24-NOV-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));  
+INSERT INTO zipcode VALUES ('02124','Dorchester','MA','AMORRISO',TO_DATE('03-AUG-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('24-NOV-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));   
+INSERT INTO zipcode VALUES ('02155','Tufts Univ. Bedford','MA','AMORRISO',TO_DATE('03-AUG-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('24-NOV-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));    
+INSERT INTO zipcode VALUES ('02189','Weymouth','MA','AMORRISO',TO_DATE('03-AUG-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('24-NOV-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO zipcode VALUES ('02563','Sandwich','MA','AMORRISO',TO_DATE('03-AUG-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('24-NOV-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO zipcode VALUES ('06401','Ansonia','CT','AMORRISO',TO_DATE('03-AUG-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('24-NOV-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO zipcode VALUES ('06455','Middlefield','CT','AMORRISO',TO_DATE('03-AUG-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('24-NOV-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));  
+INSERT INTO zipcode VALUES ('06483','Oxford','CT','AMORRISO',TO_DATE('03-AUG-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('24-NOV-2007 00:00:00','DD-MON-YYYY HH24:MI:SS')); 
+INSERT INTO zipcode VALUES ('06520','New Haven','CT','AMORRISO',TO_DATE('03-AUG-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('24-NOV-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));    
+INSERT INTO zipcode VALUES ('06605','Bridgeport','CT','AMORRISO',TO_DATE('03-AUG-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('24-NOV-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));   
+INSERT INTO zipcode VALUES ('06798','Woodbury','CT','AMORRISO',TO_DATE('03-AUG-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('24-NOV-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO zipcode VALUES ('06820','Georgetown','WV','AMORRISO',TO_DATE('03-AUG-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('24-NOV-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));   
+INSERT INTO zipcode VALUES ('06830','Greenwich','CT','AMORRISO',TO_DATE('03-AUG-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('24-NOV-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));    
+INSERT INTO zipcode VALUES ('06850','Norwalk','CT','AMORRISO',TO_DATE('03-AUG-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('24-NOV-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO zipcode VALUES ('06851','Norwalk','CT','AMORRISO',TO_DATE('03-AUG-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('24-NOV-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO zipcode VALUES ('06853','Rowayton','CT','AMORRISO',TO_DATE('03-AUG-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('24-NOV-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO zipcode VALUES ('06870','Old Greenwich','CT','AMORRISO',TO_DATE('03-AUG-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('24-NOV-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO zipcode VALUES ('06877','Ridgefield','CT','AMORRISO',TO_DATE('03-AUG-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('24-NOV-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));   
+INSERT INTO zipcode VALUES ('06880','Westport','CT','AMORRISO',TO_DATE('03-AUG-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('24-NOV-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));
+commit;
+
+nested cursor
+
+SET SERVEROUTPUT ON
+     DECLARE
+        v_zip zipcode.zip%TYPE;
+        v_student_flag CHAR;
+        CURSOR c_zip IS
+           SELECT zip, city, state
+             FROM zipcode
+            WHERE state = 'CT';
+        CURSOR c_student IS
+           SELECT first_name, last_name
+            FROM student
+           WHERE zip = v_zip;
+    BEGIN
+       FOR r_zip IN c_zip
+       LOOP
+          v_student_flag := 'N';
+          v_zip := r_zip.zip;
+          DBMS_OUTPUT.PUT_LINE(CHR(10));
+          DBMS_OUTPUT.PUT_LINE('Students living in '||
+             r_zip.city);
+          FOR r_student in c_student
+          LOOP
+             DBMS_OUTPUT.PUT_LINE(
+                r_student.first_name||
+                ' '||r_student.last_name);
+             v_student_flag := 'Y';
+          END LOOP;
+          IF v_student_flag = 'N'
+             THEN
+             DBMS_OUTPUT.PUT_LINE
+                  ('No Students for this zipcode');
+          END IF;
+       END LOOP;
+  END; 
+
+
+###################################################
+
+update cursor
+
+CREATE TABLE COURSE
+ (COURSE_NO NUMBER(8,0) 
+ ,DESCRIPTION VARCHAR2(50) 
+ ,COST NUMBER(9,2) 
+ ,PREREQUISITE NUMBER(8,0)
+ ,CREATED_BY VARCHAR2(30) 
+ ,CREATED_DATE DATE 
+ ,MODIFIED_BY VARCHAR2(30) 
+ ,MODIFIED_DATE DATE 
+ )
+
+
+INSERT INTO course VALUES (10,'Technology Concepts',1195,NULL,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'));   
+INSERT INTO course VALUES (20,'Intro to Information Systems',1195,NULL,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS')); 
+INSERT INTO course VALUES (25,'Intro to Programming',1195,140,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO course VALUES (80,'Programming Techniques',1595,204,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'));   
+INSERT INTO course VALUES (100,'Hands-On Windows',1195,20,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'));    
+INSERT INTO course VALUES (120,'Intro to Java Programming',1195,80,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO course VALUES (122,'Intermediate Java Programming',1195,120,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS')); 
+INSERT INTO course VALUES (124,'Advanced Java Programming',1195,122,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO course VALUES (125,'Java Developer I',1195,122,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'));    
+INSERT INTO course VALUES (130,'Intro to Unix',1195,310,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS')); 
+INSERT INTO course VALUES (132,'Basics of Unix Admin',1195,130,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'));    
+INSERT INTO course VALUES (134,'Advanced Unix Admin',1195,132,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO course VALUES (135,'Unix Tips and Techniques',1095,134,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO course VALUES (140,'Systems Analysis',1195,20,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS')); 
+INSERT INTO course VALUES (142,'Project Management',1195,20,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'));  
+INSERT INTO course VALUES (144,'Database Design',1195,420,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'));    
+INSERT INTO course VALUES (145,'Internet Protocols',1195,310,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS')); 
+INSERT INTO course VALUES (146,'Java for C/C++ Programmers',1195,NULL,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'));   
+INSERT INTO course VALUES (147,'GUI Design Lab',1195,20,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO course VALUES (204,'Intro to SQL',1195,20,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'));   
+INSERT INTO course VALUES (210,'Oracle Tools',1195,220,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'));  
+INSERT INTO course VALUES (220,'PL/SQL Programming',1195,80,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'));  
+INSERT INTO course VALUES (230,'Intro to the Internet',1095,10,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'));   
+INSERT INTO course VALUES (240,'Intro to the BASIC Language',1095,25,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'));    
+INSERT INTO course VALUES (310,'Operating Systems',1195,NULL,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS')); 
+INSERT INTO course VALUES (330,'Network Administration',1195,130,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'));  
+INSERT INTO course VALUES (350,'Java Developer II',1195,125,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO course VALUES (420,'Database System Principles',1195,25,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO course VALUES (430,'Java Developer III',1195,350,'DSCHERER',TO_DATE('29-MAR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('05-APR-2007 20:14:33','DD-MON-YYYY HH24:MI:SS'));   
+
+
+
+now
+
+DECLARE
+CURSOR c_course IS
+SELECT course_no, cost
+FROM course FOR UPDATE;
+BEGIN
+FOR r_course IN c_course
+LOOP
+IF r_course.cost < 2500
+THEN
+UPDATE course
+SET cost = r_course.cost - 10
+WHERE course_no = r_course.course_no;
+END IF;
+END LOOP;
+END;
+
+
+now change the value to + 10 and see
+
+
+

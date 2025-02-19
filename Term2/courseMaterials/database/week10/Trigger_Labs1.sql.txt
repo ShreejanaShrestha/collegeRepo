@@ -1,0 +1,59 @@
+
+
+--BEFORE TRIGGER
+
+---- LAB - 1
+
+
+
+--First create the table named student and populate with data - Use the script i have uploaded to moodle
+-- Now create the following Before Insert TRIGGER 
+
+create or replace TRIGGER student_bi
+BEFORE INSERT ON STUDENT
+FOR EACH ROW
+BEGIN
+   :NEW.student_id    := STUDENT_ID_SEQ.NEXTVAL;
+   :NEW.created_by    := USER;
+   :NEW.created_date  := SYSDATE;
+   :NEW.modified_by   := USER;
+   :NEW.modified_date := SYSDATE;
+END;
+
+
+--- Now try to insert the values to the students table using following SQL INSERT statements
+--  Note that we dont have to supply all the values, some values are provided by the trigger that we created
+
+INSERT INTO student (SALUTATION,FIRST_NAME,LAST_NAME,STREET_ADDRESS,ZIP,
+PHONE,EMPLOYER,REGISTRATION_DATE)
+VALUES ('Mr.','Sagara','Samarawickrama','81-Pinary Trail.','12345',
+'647-647-6666','Lambton College.',SYSDATE); 
+
+--- Now open the table and confirm that complete record is inserted
+
+
+--- ##################################################################
+
+
+
+CREATE TABLE CPCM_STUDENT ( 
+  STUDENT_ID       NUMBER (5)    NOT NULL, 
+  STUDENT_NAME      VARCHAR2 (20)  NOT NULL, 
+  CREATED_BY       VARCHAR2 (20)  NOT NULL, 
+  CREATED_DATE     DATE          NOT NULL, 
+  PRIMARY KEY ( STUDENT_ID  ) 
+ );
+ 
+ 
+create or replace TRIGGER cpcm_student_tr
+BEFORE INSERT ON CPCM_STUDENT
+FOR EACH ROW
+BEGIN
+   :NEW.created_date  := SYSDATE;
+END;
+
+INSERT INTO CPCM_STUDENT(STUDENT_ID,STUDENT_NAME,CREATED_BY)
+VALUES (1002,'Gorav','Sagara');
+
+
+--- #####################################################################

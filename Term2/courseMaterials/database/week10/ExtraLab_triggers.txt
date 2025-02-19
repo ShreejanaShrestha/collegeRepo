@@ -1,0 +1,49 @@
+CREATE TABLE person_records
+(
+    PERSON_ID number(10) primary key,
+    FIRST_NAME varchar2(50),
+    LAST_NAME varchar2(50),
+    HIRE_DATE date,
+    UPDATED_BY varchar2(20),
+    UPDATED_DATE date
+);
+
+
+CREATE OR REPLACE TRIGGER trg_before_person_update
+BEFORE UPDATE
+  on person_records
+  FOR EACH ROW 
+
+DECLARE
+username varchar2(20);
+
+BEGIN
+
+  SELECT USER INTO username FROM dual;
+  
+  -- Setting updated_by and updated_Date values.
+  :NEW.UPDATED_BY := username;
+  :NEW.UPDATED_DATE := sysdate;
+
+END;
+
+
+
+
+alter session set nls_date_format = 'DD-MON-YYYY';
+
+INSERT INTO person_records VALUES (101,'Devil','Khedut',sysdate,null,null);
+INSERT INTO person_records VALUES (102,'Kanji','Yadav',sysdate,null,null);
+
+
+select * from person_records;
+
+now update
+
+
+UPDATE person_records SET first_name = 'David' WHERE person_id = 101;
+
+UPDATE person_records SET first_name = 'Warner' WHERE person_id = 102;
+
+
+select * from person_records;

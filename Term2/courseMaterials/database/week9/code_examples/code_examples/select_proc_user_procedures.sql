@@ -1,0 +1,2 @@
+-- Information about procedures in USER_PROCEDURES
+SELECT * FROM USER_PROCEDURES WHERE OBJECT_TYPE = 'PROCEDURE' AND object_name = 'ADD_DEPT1';

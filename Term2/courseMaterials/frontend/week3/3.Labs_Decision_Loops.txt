@@ -1,0 +1,235 @@
+<!-- Decision & Loops -->
+
+
+<html>
+<body>
+<script type="text/javascript">
+var d = new Date();
+var time = d.getHours();
+if (time < 10)
+{
+document.write("<b>Good morning</b>");
+}
+</script>
+<p>This example demonstrates the If statement.</p>
+<p>If the time on your browser is less than 10, you will get
+a "Good morning" greeting.</p>
+</body>
+</html>
+
+<!-- if else -->
+
+<html>
+<body>
+<script type="text/javascript">
+var d = new Date();
+var time = d.getHours();
+if (time < 10)
+{
+document.write("<b>Good morning</b>");
+}
+else
+{
+document.write("<b>Good day</b>");
+}
+</script>
+<p>
+This example demonstrates the If...Else statement.
+</p>
+<p>
+If the time on your browser is less than 10,
+you will get a "Good morning" greeting.
+Otherwise you will get a "Good day" greeting.
+</p>
+</body>
+</html>
+
+<!-- if else -->
+
+<html>
+<body>
+<script type="text/javascript">
+var r= Math.random();
+if (r > 0.5)
+{
+document.write("<a href='https://www.lambtoncollege.ca'>Lambton College</a>");
+}
+else
+{
+document.write("<a href='https://www.canada.ca/en.html'> Govenment Of canada</a>");
+}
+</script>
+</body>
+</html>
+
+<!-- if else if -->
+
+<html>
+<body>
+<script type="text/javascript">
+var d = new Date();
+var time = d.getHours();
+if (time<10)
+{
+document.write('<b>Good morning</b>');
+}
+else if (time>=10 && time<16)
+{
+document.write('<b>Good day</b>');
+}
+else
+{
+document.write('<b>Hello World!</b>');
+}
+</script>
+<p>
+This example demonstrates the if..else if...else statement.
+</p>
+</body>
+</html>
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Loops
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+<!-- For Loop  -->
+
+<html>
+<body>
+<script type="text/javascript">
+for (i = 0; i <= 5; i++)
+{
+document.write('The number is '+ i);
+document.write('<br />');
+}
+</script>
+<p>Explanation:</p>
+<p>This for loop starts with i=0.</p>
+<p>As long as <b>i</b> is less than, or equal to 5, the loop
+will continue to run.</p>
+<p><b>i</b> will increase by 1 each time the loop runs.</p>
+</body>
+</html>
+
+<!-- While Loop  -->
+<html>
+<body>
+<script type="text/javascript">
+i=0;
+while (i<=5)
+{
+document.write('The number is ' + i);
+document.write('<br />');
+i++;
+}
+</script>
+<p>Explanation:</p>
+<p><b>i</b> is equal to 0.</p>
+<p>While <b>i</b> is less than, or equal to, 5, the loop
+will continue to run.</p>
+<p><b>i</b> will increase by 1 each time the loop runs.</p>
+</body>
+</html>
+
+<!-- Do While Loop  -->
+
+<html>
+<body>
+<script type="text/javascript">
+i = 0;
+do
+{
+document.write('The number is ' + i);
+document.write('<br />');
+i++;
+}
+while (i <= 5)
+</script>
+<p>Explanation:</p>
+<p><b>i</b> equal to 0.</p>
+<p>The loop will run</p>
+<p><b>i</b> will increase by 1 each time the loop runs.</p>
+<p>While <b>i</b> is less than, or equal to, 5, the loop
+will continue to run.</p>
+</body>
+</html>
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Additional Flow Control
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+<!-- Break  -->
+
+
+<html>
+<body>
+<script type="text/javascript">
+var i=0;
+for (i=0;i<=10;i++)
+{
+if (i==3)
+{
+break;
+}
+document.write('The number is ' + i);
+document.write('<br />');
+}
+</script>
+<p>Explanation: The loop will break when i=3.</p>
+</body>
+</html>
+
+<!-- Continue  -->
+<html>
+<body>
+<script type="text/javascript">
+var i=0;
+for (i=0;i<=10;i++)
+{
+if (i==3)
+{
+continue;
+}
+document.write('The number is ' + i);
+document.write('<br />');
+}
+</script>
+<p>Explanation: The loop will break the current loop and
+continue with the next value when i=3.</p>
+</body>
+</html>
+
+### 
+Following Script is very useful when you work with objects
+####
+
+
+
+<!-- JavaScript for...in Statement
+The for...in statement loops through the elements of an array or through the
+properties of an object.
+The syntax is as follows:
+for (variable in object)
+{
+code to be executed
+}
+ -->
+ 
+  
+<html>
+<body>
+<script type="text/javascript">
+var x;
+var mycars = new Array();
+mycars[0] = "Benz";
+mycars[1] = "Volvo";
+mycars[2] = "BMW";
+for (x in mycars)
+{
+document.write(mycars[x] + "<br />");
+}
+</script>
+</body>
+</html>
+
+

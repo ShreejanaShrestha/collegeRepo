@@ -1,0 +1,91 @@
+create table employee(
+    empid int primary key,
+    empname varchar(100), 
+    department varchar(50),
+    contactno number(20), 
+    emaildid varchar(100), 
+    empheadid int)
+    
+create table empdept(
+    deptid varchar(50) primary key,
+    deptname varchar(100), 
+    dept_off varchar(100), 
+    depthead int, 
+    foreign key (depthead)references employee(empid)
+    );
+        
+create table empsalary(
+    empid int, 
+    salary number(12, 2), 
+    ispermanent varchar(3),
+     foreign key (empid) references employee(empid)
+);
+
+create table project(
+    projectid varchar(50) primary key, 
+    duration int);
+    
+create table country(
+    cid varchar(50) primary key, 
+    cname varchar(100)
+    );
+    
+create table clienttable(
+    clientid varchar(50) primary key, 
+    clientname varchar(100), 
+    cid varchar(50) references country(cid));
+    
+create table empproject(
+    empid int, 
+    projectid varchar(50), 
+    clientid varchar(50),
+    startyear int, 
+    endyear int,
+    foreign key (empid) references employee(empid),
+    foreign key (projectid) references project(projectid),
+    foreign key (clientid) references clienttable(clientid)
+    );
+
+
+INSERT INTO employee VALUES(3,'priya', 'IT', 6398763456, 'priya@gmail.com', 1005);
+INSERT INTO employee VALUES (4, 'John', 'HR', 9876543210, 'john@example.com', 1006);
+INSERT INTO employee VALUES (5, 'Emma', 'Marketing', 8765432109, 'emma@example.com', 1007);
+INSERT INTO employee VALUES (6, 'Michael', 'Finance', 7654321098, 'michael@example.com', 1008);
+INSERT INTO employee VALUES (7, 'Sophia', 'Operations', 6543210987, 'sophia@example.com', 1009);
+
+INSERT INTO empdept VALUES (101, 'IT', 'Monday', 3);
+INSERT INTO empdept VALUES (102, 'HR', 'Tuesday', 4); 
+INSERT INTO empdept VALUES (103, 'Marketing', 'Wednesday', 5); 
+INSERT INTO empdept VALUES (104, 'Finance', 'Thursday', 6); 
+INSERT INTO empdept VALUES (105, 'Operations', 'Friday', 7);
+
+INSERT INTO empsalary VALUES (3, 80000, 'No');
+INSERT INTO empsalary VALUES (4, 75000, 'Yes');
+INSERT INTO empsalary VALUES (5, 70000, 'No');
+INSERT INTO empsalary VALUES (6, 85000, 'Yes');
+INSERT INTO empsalary VALUES (7, 72000, 'No');
+
+INSERT INTO project VALUES ('p-12', 25);
+INSERT INTO project VALUES ('p-13', 30);
+INSERT INTO project VALUES ('p-14', 20);
+INSERT INTO project VALUES ('p-15', 28);
+INSERT INTO project VALUES ('p-16', 35);
+
+INSERT INTO country VALUES (19, 'India');
+INSERT INTO country VALUES (20, 'United States');
+INSERT INTO country VALUES (21, 'China');
+INSERT INTO country VALUES (22, 'Brazil');
+INSERT INTO country VALUES (23, 'Russia');
+
+INSERT INTO clienttable VALUES (102, 'ABC Group', 19);
+INSERT INTO clienttable VALUES (103, 'XYZ Corporation', 20);
+INSERT INTO clienttable VALUES (104, 'LMN Industries', 21);
+INSERT INTO clienttable VALUES (105, 'PQR Company', 22);
+INSERT INTO clienttable VALUES (106, 'DEF Enterprises', 23);
+
+
+INSERT INTO empproject VALUES (3, 'p-12', 102, 2010, 2015);
+INSERT INTO empproject VALUES (4, 'p-13', 103, 2011, 2016);
+INSERT INTO empproject VALUES (5, 'p-14', 104, 2012, 2017);
+INSERT INTO empproject VALUES (6, 'p-15', 105, 2013, 2018);
+INSERT INTO empproject VALUES (7, 'p-16', 106, 2014, 2019);

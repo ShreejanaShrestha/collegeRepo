@@ -1,0 +1,94 @@
+-- create instructor table first
+CREATE TABLE INSTRUCTOR
+ (INSTRUCTOR_ID NUMBER(8,0) 
+ ,SALUTATION VARCHAR2(5)
+ ,FIRST_NAME VARCHAR2(25)
+ ,LAST_NAME VARCHAR2(25)
+ ,STREET_ADDRESS VARCHAR2(50)
+ ,ZIP VARCHAR2(5)
+ ,PHONE VARCHAR2(15)
+ ,CREATED_BY VARCHAR2(30) 
+ ,CREATED_DATE DATE 
+ ,MODIFIED_BY VARCHAR2(30) 
+ ,MODIFIED_DATE DATE 
+ )
+
+
+
+
+--- insert the data to the instructor table using following script
+
+INSERT INTO instructor VALUES (101,'Mr','Fernand','Hanks','100 East 87th','10015','2125551212','ESILVEST',TO_DATE('02-JAN-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ESILVEST',TO_DATE('02-JAN-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));    
+INSERT INTO instructor VALUES (102,'Mr','Tom','Wojick','518 West 120th','10025','2125551212','ESILVEST',TO_DATE('02-JAN-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ESILVEST',TO_DATE('02-JAN-2007 00:00:00','DD-MON-YYYY HH24:MI:SS')); 
+INSERT INTO instructor VALUES (103,'Ms','Nina','Schorin','210 West 101st','10025','2125551212','ESILVEST',TO_DATE('02-JAN-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ESILVEST',TO_DATE('02-JAN-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));    
+INSERT INTO instructor VALUES (104,'Mr','Gary','Pertez','34 Sixth Ave','10035','2125551212','ESILVEST',TO_DATE('02-JAN-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ESILVEST',TO_DATE('02-JAN-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));  
+INSERT INTO instructor VALUES (105,'Ms','Anita','Morris','34 Maiden Lane','10015','2125551212','ESILVEST',TO_DATE('02-JAN-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ESILVEST',TO_DATE('02-JAN-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));    
+INSERT INTO instructor VALUES (106,'Rev','Todd','Smythe','210 West 101st','10025','2125551212','ESILVEST',TO_DATE('02-JAN-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ESILVEST',TO_DATE('02-JAN-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));    
+INSERT INTO instructor VALUES (107,'Dr','Marilyn','Frantzen','254 Bleeker','10005','2125551212','ESILVEST',TO_DATE('02-JAN-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ESILVEST',TO_DATE('02-JAN-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));   
+INSERT INTO instructor VALUES (108,'Mr','Charles','Lowry','518 West 120th','10025','2125551212','ESILVEST',TO_DATE('02-JAN-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ESILVEST',TO_DATE('02-JAN-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));   
+INSERT INTO instructor VALUES (109,'Hon','Rick','Chow','56 10th Avenue','10015','2125551212','ESILVEST',TO_DATE('02-JAN-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ESILVEST',TO_DATE('02-JAN-2007 00:00:00','DD-MON-YYYY HH24:MI:SS')); 
+INSERT INTO instructor VALUES (110,'Ms','Irene','Willig','415 West 101st',NULL,'2125551212','ARISCHER',TO_DATE('11-MAR-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'),'ARISCHER',TO_DATE('11-MAR-2007 00:00:00','DD-MON-YYYY HH24:MI:SS'));  
+
+COMMIT;
+
+
+
+-- ####### NOW YOU CAN DO THE FOLLOWING LAB
+
+-- first create this table
+
+
+CREATE TABLE AUDIT_TRAIL 
+   (TABLE_NAME VARCHAR2(25 BYTE), 
+	TRANSACTION_NAME VARCHAR2(25 BYTE), 
+	TRANSACTION_USER VARCHAR2(25 BYTE), 
+	TRANSACTION_DATE DATE
+   );
+   
+   
+ --Now create the following trigger
+ 
+ CREATE OR REPLACE TRIGGER instructor_aud
+AFTER UPDATE OR DELETE ON INSTRUCTOR
+DECLARE
+   v_trans_type VARCHAR2(10); 
+BEGIN
+   v_trans_type := CASE
+                      WHEN UPDATING THEN 'UPDATE'
+                      WHEN DELETING THEN 'DELETE'
+                    END;
+   
+   INSERT INTO audit_trail 
+      (TABLE_NAME, TRANSACTION_NAME, TRANSACTION_USER, TRANSACTION_DATE)
+   VALUES 
+      ('INSTRUCTOR', v_trans_type, USER, SYSDATE);
+END; 
+
+
+-- Now issue the Update statement
+
+UPDATE instructor
+SET phone = ‘7181234567’
+WHERE instructor_id = 101;
+
+-- check the audit rail
+
+select * from audit_trail;
+
+-- Notice the entry in the audit_trail table
+
+
+--  ##############################
+ 
+ 
+ DELETE instructor
+ WHERE instructor_id = 110;
+ 
+ -- check the audit rail again
+
+select * from audit_trail;
+
+-- Notice the entry in the audit_trail table
+-- now you should have 2 entries one for update and other for delete
+ 
+ 

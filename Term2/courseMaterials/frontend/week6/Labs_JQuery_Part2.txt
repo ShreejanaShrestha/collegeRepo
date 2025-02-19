@@ -1,0 +1,378 @@
+----------------------------
+--- Labs - JQuery - Part 2
+-----------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> First Example </title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // script goes here
+  });
+});
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+-----
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Select Elements by Wildcard Selector</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+$('*').css('border','1px solid #333');
+});
+
+</script>
+</head>
+<body>
+<div class=”container”>
+<h1>Hello jQuery.</h1>
+</div>
+</body>
+</html>
+
+-----
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> CSS Property to set a value </title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+
+// select item by html tag
+$('h1').css('font-family','arial,verdana');
+});
+</script>
+<body>
+<div class=’container’>
+<h1>Hello jQuery.</h1>
+</div>
+</body>
+</html>
+
+--------
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> # or ID Selector</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+$('#sidebar').css('display','none');
+//$('#sidebar').css('display','inline');
+});
+</script>
+<body>
+<div id='sidebar'>
+<h1>My sidebar</h1>
+<ul>
+<li><a href='/nav'>Navigation</a></li>
+</ul>
+</div>
+</body>
+</html>
+
+-------
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> Select one or Many Elements</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+$('.book.inactive').css('display','none');
+});
+</script>
+<body>
+<div class='book inactive'>
+<p>Travel Guide to NYC</p>
+</div>
+<div class='book active'>
+<p>Travel Guide to San Francisco</p>
+</div>
+<div class='book inactive'>
+<p>Travel Guide to Seattle</p>
+</div>
+<div class='book active'>
+<p>Travel Guide to Miami</p>
+</div>
+<div class='book active'>
+<p>Travel Guide to Palo Alto</p>
+</div>
+</body>
+</html>
+
+---------
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> Select specific paragraph element </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+$('.book.inactive').css('display','none');
+});
+</script>
+<body>
+<div class='book inactive'>
+<p>Travel Guide to NYC</p>
+</div>
+<div class='book active'>
+<p>Travel Guide to San Francisco</p>
+</div>
+<div class='book inactive'>
+<p>Travel Guide to Seattle</p>
+</div>
+<div class='book active'>
+<p>Travel Guide to Miami</p>
+</div>
+<div class='book active'>
+<p>Travel Guide to Palo Alto</p>
+</div>
+</body>
+</html>
+
+----------
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> Select Descendent Element</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+$('.book.inactive > p').css('display','none');
+$('.book.inactive').append('Sorry this book is sold out!').css('color','red');
+});
+</script>
+<body>
+<div class='book inactive'>
+<p>Travel Guide to NYC</p>
+</div>
+<div class='book active'>
+<p>Travel Guide to San Francisco</p>
+</div>
+<div class='book inactive'>
+<p>Travel Guide to Seattle</p>
+</div>
+<div class='book active'>
+<p>Travel Guide to Miami</p>
+</div>
+<div class='book active'>
+<p>Travel Guide to Palo Alto</p>
+</div>
+</body>
+</html>
+
+---------
+
+<html>
+<head>
+<title> Set Backgound Color for an elemeent</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    alert("Background color = " + $("p").css("background-color"));
+  });
+});
+</script>
+</head>
+<body>
+
+<h2>This is a heading</h2>
+
+<p style="background-color:#ff0000">This is a paragraph.</p>
+<p style="background-color:#00ff00">This is a paragraph.</p>
+<p style="background-color:#0000ff">This is a paragraph.</p>
+
+<button>Return background-color of p</button>
+
+</body>
+</html>
+
+-----
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> Background Color of rows in the table </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+$('tr:even').css('background','#dedede');
+$('tr:odd').css('background','#ffffff');
+});
+</script>
+<body>
+<table>
+<tr>
+<th>Product</th>
+<th>Description</th>
+<th>Price</th>
+</tr>
+<tr>
+<td>Paper Towels</td>
+<td>The most absorbent paper towels.</td>
+<td>$18.99</td>
+</tr>
+<tr>
+<td>Paper Napkins</td>
+<td>Perfect for your outdoor gathering.</td>
+<td>$16.99</td>
+</tr>
+<tr>
+<td>Paper Plates</td>
+<td>The best value.</td>
+<td>$5.99</td>
+</tr>
+<tr>
+<td>Plastic Forks</td>
+<td>The essential picnic accessory.</td>
+<td>$2.99</td>
+</tr>
+</table>
+</body>
+</html>
+
+------
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> Change the border of Specific element </title>
+<title> First Ex</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+$("tr td:contains('Paper Towels')").css('border','1px dashed #333');
+});
+</script>
+<body>
+<table>
+<tr>
+<th>Product</th>
+<th>Description</th>
+<th>Price</th>
+</tr>
+<tr>
+<td>Paper Towels</td>
+<td>The most absorbent paper towels.</td>
+<td>$18.99</td>
+</tr>
+<tr>
+<td>Paper Napkins</th>
+<td>Perfect for your outdoor gathering.</th>
+<td>$16.99</th>
+</tr>
+<tr>
+<td>Paper Plates</td>
+<td>The best value.</td>
+<td>$5.99</td>
+</tr>
+<tr>
+<td>Plastic Forks</td>
+<td>The essential picnic accessory.</td>
+<td>$2.99</td>
+</tr>
+</table>
+</body>
+</html>
+
+-----
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add the content </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+$('.content').html('Hello jQuery.');
+});
+</script>
+<body>
+<div class='content'></div>
+<p>I run 4 times a week.</p>
+<p>I lift weights 3 times a week.</p>
+</body>
+</html>
+
+------
+
+<html>
+<head>
+<title> Append contents</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+$('.content').append('<p>I ride my bike 3 times a week.</p>');
+});
+
+</script>
+<body>
+<div class="content">
+<p>I run 4 times a week.</p>
+<p>I lift weights 3 times a week.</p>
+</div>
+</body>
+</html>
+
+-------
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> Adding using after</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function() {
+$('.content').after('<p>I ride my bike 3 times a week.</p>');
+});
+</script>
+<body>
+<div class="content">
+<p>I run 4 times a week.</p>
+<p>I lift weights 3 times a week.</p>
+</div>
+</body>
+</html>
+
+--------
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Remove Items</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+$('.content').remove();
+});
+</script>
+<body>
+<div class="content">
+<p>I run 4 times a week.</p>
+<p>I lift weights 3 times a week.</p>
+</div>
+</body>
+</html>
+
+-------

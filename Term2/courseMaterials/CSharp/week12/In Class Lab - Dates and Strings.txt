@@ -1,0 +1,17 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		DateTime checkin = DateTime.Now;
+		DateTime checkOut = DateTime.Parse("2022-12-08");
+		decimal totalCost = 0.00m;
+		// for weekdays, use $100 and for weekend use $150, 
+		// write the code to calculate the price for your stay
+		
+		// format total cost in currency 
+		Console.WriteLine("Total cost of your stay is {0}", totalCost);
+		
+	}
+}

@@ -1,0 +1,81 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.BorderLayout;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class MyKiloCalculator {
+
+	private JFrame frame;
+	private JTextField textField;
+	private JLabel lblNewLabel_1;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					MyKiloCalculator window = new MyKiloCalculator();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public MyKiloCalculator() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JPanel panel = new JPanel();
+		frame.getContentPane().add(panel, BorderLayout.NORTH);
+		
+		JLabel lblNewLabel = new JLabel("Please enter the value in kilometers");
+		panel.add(lblNewLabel);
+		
+		textField = new JTextField();
+		panel.add(textField);
+		textField.setColumns(10);
+		
+		JButton btnNewButton = new JButton("Convert");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int km = Integer.parseInt(textField.getText());
+				double miles = km * 0.62;
+				//JOptionPane.showMessageDialog(null, textField.getText() +
+		        //          " kilometers is " + miles + " miles.");
+				lblNewLabel_1.setText(textField.getText() +
+				        " kilometers is "+Double.toString(miles) + " miles");
+			}
+		});
+		panel.add(btnNewButton);
+		
+		JPanel panel_1 = new JPanel();
+		frame.getContentPane().add(panel_1, BorderLayout.CENTER);
+		
+		lblNewLabel_1 = new JLabel("");
+		panel_1.add(lblNewLabel_1);
+		
+	}
+
+}
